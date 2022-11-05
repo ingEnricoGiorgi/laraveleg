@@ -21,13 +21,29 @@ class FlightController extends Controller
     }
 
     /**
+     * Save a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\Request  $req
+     */
+    public function save(Request $request)
+    {
+         print_r(request()->input('status'));
+     //   $input = $request->all();
+     //   print_r($input);
+   //    request()->input('status');
+
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
+     * @param  \App\Http\Requests\Request  $req
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = $request->status;
+        echo $data;
     }
 
     /**

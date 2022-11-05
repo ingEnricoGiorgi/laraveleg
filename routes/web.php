@@ -21,5 +21,9 @@ Route::get('/flight', [FlightController::class, 'index']);
 Route::get('/flightinsert/{status}', function ($status) {
     return 'Flight '.$status;
 });
-Route::get('/flightinsertstore/{status}', [FlightController::class, 'store']);
+Route::get('/flightinsertstore/{status}', );
 Route::get('/flightinsertstore/{status}', [FlightController::class, 'store'])->name('status');
+
+Route::view('/flightform', 'flightview');
+//Route::post('/submit', [FlightController::class, 'save']);
+Route::post('/submit', [FlightController::class, 'create']);
